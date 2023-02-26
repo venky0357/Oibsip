@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature converter website </title>
+ <style>
+    body{
+        background-color: rgb(88, 186, 190);
+    }
+    h2{
+        text-align: center;
+        color:rgb(169, 73, 38)
+    }
+    .converter{
+        border:1px solid rgb(29, 229, 96);
+        width:200px;
+        height:200px;
+        position: absolute;
+        top:100px;
+        left:550px;
+        padding:100px;
+        font-family: 'Gill Sans',  sans-serif;
+        border-radius: 5px;
+        background-color: aliceblue;
+    }
+    input[type="number"]{
+        margin-top:5px;
+        border-top: 1px;
+        border-left: 1px;
+        border-right: 1px;
+        width:200px;
+        height: 25px;
+        margin-bottom: 15px;
+    }
+    input[type="button"]{
+        margin-top:10px;
+        border:1px solid #fefefe;
+        background-color: rgb(45, 168, 86);
+        padding:5px;
+        color:#fff;
+    }
+    input[type="button"]:hover{
+        margin-top:10px;
+        border:1px solid #fefefe;
+        background-color: rgb(29, 229, 96);
+        padding:5px;
+        color:#fff;
+    }
+
+
+ </style>
+</head>
+<body>
+    <h2>Temperature converter</h2>   
+      <div class="converter">
+             Enter degree: <input type="number" id="nmb"/><br>
+              <input type="radio" name="celcius" id="rd1"/>celcius
+              <input type="radio" name="farenheit" id="rd2"/>farenheit<br>
+            <input type="button"onclick="convert()" value="Convert"/><br>
+           <p id="result"></p>
+      </div>
+      <script>
+  function convert()
+  {
+       const val=document.getElementById("nmb").value;
+       const cel=document.getElementById("rd1").checked;
+       const far=document.getElementById("rd2").checked;
+       if(cel==true && far==true) 
+       document.getElementById("result").innerHTML="refresh the page";
+       else if(cel==true)
+       document.getElementById("result").innerHTML=(val-32)*5/9;
+       else if(far==true)
+       document.getElementById("result").innerHTML=(val*9/5)+32;
+  }
+      </script>
+</body>
+</html>

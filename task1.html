@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="contents">
+        <div class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">AboutUs</a></li>
+                <li><a href="#help">Help</a></li>
+            </ul>
+            <input type="button" id='dashboard_page'  onclick=dashboard_pg() class="login" value="Logout">
+        </div>
+        <div class="poster">
+            <img src="home.jpg">
+            <h2>Data <span>Analyse</span></h2>
+            <div class="bar"></div>
+            <p>Give what ever Data to Analyse,This is the best Platform that can convert the data into plots and graphs.</p>
+            <input type="button" class="st" id='next_button' onclick=nextpage() value="Start Analysing">
+        </div>
+    </div>
+    <div class="keymoments">
+        <img src="graphs.jpg">
+        <div class="text">
+            <div class="text1">BarGraph</div>
+            <div class="text2">LineChart</div>
+            <div class="text3">PieChart</div>
+            <div class="text4">ScatterPlot</div>
+        </div>
+    </div>
+    <div class="middle">
+       <p> Data Visulization</p>
+        <img src="middle.jpg">
+        <div class="mid1">
+       <h4> 01. GOALS</h4>
+
+            <h5>We can use the above Graphs to visualize and see how the data is plotted</h5>
+        </div>
+        <div class="mid2">
+       <h4>02. STRATEGY</h4>
+            <h5>Most used Plots are Bargraphs/LineChart</h5>
+        </div>
+    </div>
+
+    <div class="it">
+        <img src="itsolutions.jpg">
+        <p>IT solutions</p>
+        <h4>We collaborate with you to create new value through</h4>
+          <h5>Digital transformation. We have hundreds of specialists at your service.</h5>
+    </div>
+
+    <div class="bottom" id="help">
+      <div class="top-text">
+       <h1> Get in Touch!</h1>
+       <p>We align leaders around a shared purpose and strategic story that</p><br>
+       <h2>Catalyst their business and brand to take action.</h2  >
+      </div>
+      <div class="card1">
+          <h2>Address:</h2>
+          <p>RVRJC COLLEGE OF ENGINEERING <br>CHOWDAWARAM ,522019 </p>
+      </div>
+      <div class="card2">
+        <h2>Email:</h2>
+        <p>helpdesk@rvrjc.ac.in </p>
+      </div>
+      <div class="card3">
+        <h2>Call us:</h2>
+        <p>+91-9491073317 ,+91-987654321</p>
+      </div>
+    </div>
+    <script>
+        function nextpage()
+        {
+            document.getElementById("next_button").addEventListener("click",
+    		     function()
+    		     {
+    		        window.location.href = "dashboard.html";
+    		    });
+        }
+        function dashboard_pg()
+        {
+            document.getElementById("dashboard_page").addEventListener("click",
+    		     function()
+    		     {
+    		        window.location.href = "index.html";
+    		    });
+        }
+    </script>
+</body>
+</html>
